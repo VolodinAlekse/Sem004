@@ -4,12 +4,24 @@
 // 4 -> 10
 // 8 -> 36
 
-System.Console.WriteLine("Введите число A: ");
-int num = Convert.ToInt32(Console.ReadLine());
-int result = 0;
-for (int i = 1; i <= num; i++)
+int GetNumber(string text)
 {
-    result += i; // result = result +i;
+    System.Console.Write(text);
+    return Convert.ToInt32(Console.ReadLine());
 }
 
-System.Console.WriteLine($"Сумма чисел от 1 до {num} = {result}");
+int GetSumElements(int A)
+{
+
+    int result = 0;
+
+    for (int i = 1; i <= A; i++)
+    {
+        result += i; // result = result +i;
+    }
+    return result;
+}
+int num = GetNumber("Введите число A: ");
+int res = GetSumElements(num);
+
+System.Console.WriteLine($"Сумма чисел от 1 до {num} = {res}");
