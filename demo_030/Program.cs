@@ -11,15 +11,15 @@ void PrintArray(int[] array)
         System.Console.Write($"{array[i]} ");
     }
 }
-int[] FillArray()
+int[] FillArray( int size)
 {
-    int[] arrN = new int[8];
+    int[] arrN = new int[size];
     for (int i = 0; i < 8; i++)
     {
         arrN[i] = new Random().Next(0, 2);
     }
     return arrN;
 }
-int[] myarray = FillArray();
+int[] myarray = FillArray(8);
 
 PrintArray(myarray);
